@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.block-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-right: 8px;
+  border-style: none;
+  transform: skew(-20deg);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn-text {
+  font-size: 19px;
+  color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+  transform: skew(20deg);
+}
