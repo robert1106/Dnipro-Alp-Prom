@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ButtonCallback from "../Button-callback/button-callback";
 
 import './block-one.css'
 import imgBlockOne from './bag-block-1.png'
@@ -9,7 +10,7 @@ export default class BlockOne extends Component {
         const lang = this.props.lang;
         return (
             <>
-                <div className="block-one">
+                <div className="block">
                     <img className="block-img" src={imgBlockOne} alt="image block 1"/>
                     <div className="block-one-wrap">
                         <img className="block-one-logo" src={imgLogo} alt="image logo"/>
@@ -21,13 +22,7 @@ export default class BlockOne extends Component {
                             </span>
                         </div>
                     </div>
-                    <button className="block-btn callback-btn">
-                        <a href="#" className="btn-text">{
-                            lang === "ua"
-                                ? "Зв'язатися з нами"
-                                : "Связаться с нами"}
-                        </a>
-                    </button>
+                    <ButtonCallback lang={lang}/>
                 </div>
             </>
         )

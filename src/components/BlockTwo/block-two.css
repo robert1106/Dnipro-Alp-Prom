@@ -1,0 +1,40 @@
+.block-two-element-right {
+    display: flex;
+    justify-content: right;
+}
+
+.block-two-img {
+    max-width: 55vw;
+}
+
+.block-two-wrap {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-two-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: right;
+    margin-bottom: 30px;
+    white-space: pre;
+}
+
+.block-two-under-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: right;
+    margin-bottom: 20px;
+    white-space: pre;
+}
+
+.block-two-paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: right;
+    margin-bottom: 45px;
+}

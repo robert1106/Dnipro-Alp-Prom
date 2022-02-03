@@ -25,7 +25,7 @@ export default class Nav extends Component {
         const setLang = this.props.state.setLang;
         return (
             <nav className="nav">
-                <div className="nav-wrap">
+                <div className="container nav-wrap">
                     <ul className="nav-list">
                         {this.state.optionButtons.map((btn, index) => {
                             return (<li className={"block-btn nav-item-menu "+(btn.active ? "btn-active" : "")}
