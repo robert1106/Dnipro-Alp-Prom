@@ -10,7 +10,7 @@ export default class BlockOne extends Component {
         const lang = this.props.lang;
         return (
             <>
-                <div className="block">
+                <div className="block" id="block-1">
                     <img className="block-img" src={imgBlockOne} alt="image block 1"/>
                     <div className="block-one-wrap">
                         <img className="block-one-logo" src={imgLogo} alt="image logo"/>
