@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import uniqid from 'uniqid';
+import {Link} from 'react-scroll'
 
 import './nav.css'
 
@@ -7,17 +8,13 @@ export default class Nav extends Component {
 
     state = {
         optionButtons: [
-            {ua:"Головна", ru: "Главная", active: true,},
-            {ua:"Про нас", ru: "Про нас", active: false,},
-            {ua:"Ваша вигода", ru: "Ваша вигода", active: false,},
-            {ua:"Послуги", ru: "Услуги", active: false,},
-            {ua:"Прайс", ru: "Прайс", active: false,},
-            {ua:"FAQ", ru: "FAQ", active: false,},
+            {ua:"Головна", ru: "Главная"},
+            {ua:"Про нас", ru: "Про нас"},
+            {ua:"Ваша вигода", ru: "Ваша вигода"},
+            {ua:"Послуги", ru: "Услуги"},
+            {ua:"Прайс", ru: "Прайс"},
+            {ua:"FAQ", ru: "FAQ"},
         ]
-    }
-
-    clickBtnMenu = (index) => {
-        console.log(index);
     }
 
     render() {
@@ -28,12 +25,17 @@ export default class Nav extends Component {
                 <div className="container nav-wrap">
                     <ul className="nav-list">
                         {this.state.optionButtons.map((btn, index) => {
-                            return (<li className={"block-btn nav-item-menu "+(btn.active ? "btn-active" : "")}
-                                        key={uniqid()} onClick={() => this.clickBtnMenu(index)}>
-                                        <a href="#" className="btn-text">
-                                            {lang === "ua" ? btn.ua : btn.ru}
-                                        </a>
-                                    </li>)
+                            return (<Link activeClass="btn-active"
+                                          to={"block-"+(index+1)}
+                                          spy={true}
+                                          smooth={true}
+                                          duration={500}
+                                          className="block-btn nav-item-menu "
+                                          key={uniqid()}>
+                                <span className="btn-text">
+                                    {lang === "ua" ? btn.ua : btn.ru}
+                                </span>
+                            </Link>)
                         })}
                     </ul>
                     <ul className="nav-list">
@@ -50,8 +52,4 @@ export default class Nav extends Component {
             </nav>
         )
     }
-
-
 }
-
-// {lang === "ru" ? "" : ""}

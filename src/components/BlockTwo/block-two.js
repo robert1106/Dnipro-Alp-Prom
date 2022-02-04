@@ -9,7 +9,7 @@ export default class BlockTwo extends Component {
         const lang = this.props.lang;
         return (
             <>
-                <div className="block block-two">
+                <div className="block block-two" id="block-2">
                     <img className="block-img block-two-img" src={imgBlockTwo} alt="imag block 2"/>
                     <div className="container block-two-element-right">
                         <div className="block-two-wrap">
