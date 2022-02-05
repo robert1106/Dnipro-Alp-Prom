@@ -1,26 +1,19 @@
-import React, {Component} from "react";
+import React, {Component, useState} from "react";
 import BlockOne from "../BlockOne/block-one";
 import Nav from "../Nav/nav";
 import BlockTwo from "../BlockTwo/block-two";
+import BlockThree from "../BlockThree/block-three";
 
-export default class App extends Component {
+export default function App() {
 
-    setLang = (lang) => {
-        this.setState({lang})
-    }
+    const [lang, setLang] = useState("ua")
 
-    state = {
-        lang: "ua",
-        setLang: this.setLang,
-    }
-
-    render() {
-        return (
-            <>
-                <Nav state={this.state}/>
-                <BlockOne lang={this.state.lang}/>
-                <BlockTwo lang={this.state.lang}/>
-            </>
-        )
-    }
+    return (
+        <>
+            <Nav lang={lang} setLang={setLang}/>
+            <BlockOne lang={lang}/>
+            <BlockTwo lang={lang}/>
+            <BlockThree lang={lang}/>
+        </>
+    )
 }
