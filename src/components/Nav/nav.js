@@ -10,8 +10,8 @@ export default function Nav({lang, setLang}) {
         <nav className="nav">
             <div className="container nav-wrap">
                 <ul className="nav-list">
-                    {optionButtons.map((btn, index) => {
-                        return (<Link activeClass="btn-active"
+                    {optionButtons.map((btn, index) => (
+                        <Link activeClass="btn-active"
                                       to={"block-"+(index+1)}
                                       spy={true}
                                       smooth={true}
@@ -22,7 +22,7 @@ export default function Nav({lang, setLang}) {
                                 {lang === "ua" ? btn.ua : btn.ru}
                             </span>
                         </Link>)
-                    })}
+                    )}
                 </ul>
                 <ul className="nav-list">
                     <li className={"block-btn nav-item-lang "+(lang === "ru" ? "btn-active" : "")}
