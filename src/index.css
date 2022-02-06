@@ -28,7 +28,7 @@ a {
 }
 
 .container {
-  width: 1010px;
+  width: 1110px;
   margin: 0 auto;
 }
 
@@ -49,5 +49,12 @@ a {
   color: #ffffff;
   font-family: 'Roboto Condensed', sans-serif;
   transform: skew(20deg);
+}
+
+.block-header {
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0 0 58px;
 }
 
