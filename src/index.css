@@ -58,3 +58,6 @@ a {
   margin: 0 0 58px;
 }
 
+.modal-dialog {
+  max-width: 100%;
+}

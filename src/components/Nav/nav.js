@@ -14,7 +14,6 @@ export default function Nav({lang, setLang}) {
                         <Link activeClass="btn-active"
                                       to={"block-"+(index+1)}
                                       spy={true}
-                                      smooth={true}
                                       duration={500}
                                       className="block-btn nav-item-menu "
                                       key={uniqid()}>
