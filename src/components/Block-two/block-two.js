@@ -4,7 +4,7 @@ import ButtonCallback from "../Button-callback/button-callback";
 import './block-two.css'
 import imgBlockTwo from './img-dlock-two.png'
 
-export default function BlockTwo({lang}) {
+export default function BlockTwo({lang, setShowModal}) {
     return (
         <>
             <div className="block block-two" id="block-2">
@@ -29,7 +29,7 @@ export default function BlockTwo({lang}) {
                                 "государственным и коммунальным предприятиям, ОСМД (ОСББ), а также частным лицам."}
                         </span>
                         <div className="block-two-element-right">
-                            <ButtonCallback lang={lang}/>
+                            <ButtonCallback lang={lang} onClick={() => setShowModal({callback: true, faq: false})}/>
                         </div>
                     </div>
                 </div>

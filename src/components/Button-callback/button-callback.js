@@ -2,16 +2,11 @@ import React from "react";
 
 import './button-callback.css'
 
-export default function ButtonCallback({lang}) {
-
-    function clickBtn() {
-        console.log("Open modal");
-    }
-
+export default function ButtonCallback({lang, onClick}) {
     return (
         <>
             <button className="block-btn callback-btn"
-                    onClick={clickBtn}>
+                    onClick={onClick}>
                         <span className="btn-text">{
                             lang === "ua"
                                 ? "Зв'язатися з нами"

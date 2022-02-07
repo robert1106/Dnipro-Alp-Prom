@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    height: 25vh;
+    background: linear-gradient(45deg, #0E0E28 0%, #1D1D39 100%);
+    display: flex;
+    align-items: center;
+}
+
+.column-list {
+    color: #ffffff;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-link {
+    color: #337ab7;
+}
+
+.footer-link:hover {
+    color: #23527c;
+}
+
+.footer-logo-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo-img {
+    width: 200px;
+}

@@ -1,6 +1,7 @@
 .block-two-element-right {
     display: flex;
     justify-content: right;
+    color: #333;
 }
 
 .block-two-img {
