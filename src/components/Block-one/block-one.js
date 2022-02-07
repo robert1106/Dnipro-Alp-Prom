@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import ButtonCallback from "../Button-callback/button-callback";
 
 import './block-one.css'
 import imgBlockOne from './bag-block-1.png'
 import imgLogo from './logo.svg'
 
-export default function BlockOne({lang}) {
+export default function BlockOne({lang, setShowModal}) {
     return (
         <>
             <div className="block" id="block-1">
@@ -20,7 +20,7 @@ export default function BlockOne({lang}) {
                         </span>
                     </div>
                 </div>
-                <ButtonCallback lang={lang}/>
+                <ButtonCallback lang={lang} onClick={() => setShowModal({callback: true, faq: false})}/>
             </div>
         </>
     )
