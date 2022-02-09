@@ -1,0 +1,36 @@
+.block-four-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.wrap-text-line {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.text-left {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 22px;
+    width: 210px;
+    margin: 0;
+    padding: 0;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.title-line {
+    background-color: #525695;
+    width: 100%;
+    height: 4px;
+    box-sizing: content-box;
+    margin-top: 3px;
+}
+
+.title-line-left {
+    background-color: #fbc821;
+}
