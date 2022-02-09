@@ -1,6 +1,8 @@
 import React, {Component} from "react";
+import CarouselText from '../carousels/Carousel-text/carousel-text'
 
 import './block-six.css'
+import {dataCarouselFaq} from '../../data/data-carousels'
 
 export default function BlockSix({lang, setShowModal}) {
     return (
@@ -19,6 +21,7 @@ export default function BlockSix({lang, setShowModal}) {
                         <span className="wrap-right-faq">FAQ</span>
                     </div>
                     <div className="wrap-left">
+                        <CarouselText lang={lang} data={dataCarouselFaq}/>
                         <button className="block-btn block-six-btn"
                                 onClick={() => {
                                     setShowModal({callback: true, faq: true});
