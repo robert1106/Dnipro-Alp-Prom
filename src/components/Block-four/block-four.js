@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from '../Carousel/carousel'
+import CarouselImg from '../carousels/Carousel-img/carousel-img'
 
 import './block-four.css'
 import {dataCarouselOne, dataCarouselTwo, dataCarouselThree} from '../../data/data-carousels'
@@ -22,7 +22,7 @@ export default function BlockFour({lang}) {
                         }</span>
                         <div className="title-line"/>
                     </div>
-                    <Carousel lang={lang} data={dataCarouselOne}/>
+                    <CarouselImg lang={lang} data={dataCarouselOne}/>
                     <div className="wrap-text-line">
                         <div className="title-line title-line-left"/>
                         <span className="text-left text-right">{
@@ -31,7 +31,7 @@ export default function BlockFour({lang}) {
                                 : "Высотные работы"
                         }</span>
                     </div>
-                    <Carousel lang={lang} data={dataCarouselTwo}/>
+                    <CarouselImg lang={lang} data={dataCarouselTwo}/>
                     <div className="wrap-text-line">
                         <span className="text-left">{
                             lang === "ua"
@@ -40,7 +40,7 @@ export default function BlockFour({lang}) {
                         }</span>
                         <div className="title-line"/>
                     </div>
-                    <Carousel lang={lang} data={dataCarouselThree}/>
+                    <CarouselImg lang={lang} data={dataCarouselThree}/>
                 </div>
             </div>
         </>
