@@ -37,7 +37,7 @@ export const dataCarouselOne = [
         },},
     {photo: photoCarouselOne4,
         title: {
-            ua: " Мойка окон и стеклянных фасадов ",
+            ua: " Миття вікон та скляних фасадів ",
             ru: " Мойка окон и стеклянных фасадов ",
         },},
     {photo: photoCarouselOne5,

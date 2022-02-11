@@ -6,38 +6,38 @@ import './carousel-img.css'
 export default function CarouselImg({lang, data}) {
 
     const [transform, setTransform] = useState(0);
-    const [activBtnLeft, setActivBtnLeft] = useState(false);
-    const [activBtnRight, setActivBtnRight] = useState(false);
+    const [activeBtnLeft, setActiveBtnLeft] = useState(false);
+    const [activeBtnRight, setActiveBtnRight] = useState(false);
     const WIDTH_IMG = 222;
     const LENGTH_DATA = data.length * WIDTH_IMG;
     const WIDTH_SECTION = 1110;
 
     useEffect(() => {
         if (LENGTH_DATA > WIDTH_SECTION) {
-            setActivBtnRight(true)
+            setActiveBtnRight(true)
         }
     }, [])
 
     function clickBtnLeft() {
         if(transform === 0) {
-            setActivBtnLeft(false);
+            setActiveBtnLeft(false);
         } else {
             setTransform(transform + WIDTH_IMG);
-            setActivBtnRight(true);
+            setActiveBtnRight(true);
             if ((transform + WIDTH_IMG) === 0) {
-                setActivBtnLeft(false);
+                setActiveBtnLeft(false);
             }
         }
     }
 
     function clickBtnRight() {
         if((LENGTH_DATA + transform) === WIDTH_SECTION) {
-            setActivBtnRight(false);
+            setActiveBtnRight(false);
         } else {
             setTransform(transform - WIDTH_IMG);
-            setActivBtnLeft(true);
+            setActiveBtnLeft(true);
             if ((LENGTH_DATA + transform - WIDTH_IMG) === WIDTH_SECTION) {
-                setActivBtnRight(false);
+                setActiveBtnRight(false);
             }
         }
     }
@@ -46,8 +46,8 @@ export default function CarouselImg({lang, data}) {
         <>
             <div className="section">
                 <div className="carousel-wrap-btn-left">
-                    <button className={"carousel-btn-left " + (!activBtnLeft && "inactive-btn")}
-                            onClick={() => activBtnLeft && clickBtnLeft()}/>
+                    <button className={"carousel-btn-left " + (!activeBtnLeft && "inactive-btn")}
+                            onClick={() => activeBtnLeft && clickBtnLeft()}/>
                 </div>
                 <div className="wrap-section" style={{left: transform}}>
                     {data.map((img) => {
@@ -64,8 +64,8 @@ export default function CarouselImg({lang, data}) {
                     })}
                 </div>
                 <div className="carousel-wrap-btn-right">
-                    <button className={"carousel-btn-right " + (!activBtnRight && "inactive-btn")}
-                            onClick={() => activBtnRight && clickBtnRight()}/>
+                    <button className={"carousel-btn-right " + (!activeBtnRight && "inactive-btn")}
+                            onClick={() => activeBtnRight && clickBtnRight()}/>
                 </div>
             </div>
         </>
