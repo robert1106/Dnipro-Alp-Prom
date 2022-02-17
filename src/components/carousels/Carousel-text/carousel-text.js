@@ -21,7 +21,6 @@ export default function CarouselText({lang, data}) {
         if (LENGTH_DATA) {
             setActiveBtnRight(true)
         }
-        console.log(1);
     }, [])
 
     function clickBtnLeft() {
